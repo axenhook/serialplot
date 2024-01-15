@@ -192,3 +192,10 @@ RESOURCES += misc/icons.qrc
 win32 {
     RESOURCES += misc/winicons.qrc
 }
+
+win32:CONFIG(release, debug|release): LIBS += -LC:/Qt/Qt5.12.12/5.12.12/mingw73_64/lib/ -lqwt
+else:win32:CONFIG(debug, debug|release): LIBS += -LC:/Qt/Qt5.12.12/5.12.12/mingw73_64/lib/ -lqwtd
+else:unix: LIBS += -LC:/Qt/Qt5.12.12/5.12.12/mingw73_64/lib/ -lqwt
+
+INCLUDEPATH += C:/Qt/Qt5.12.12/5.12.12/mingw73_64/include/qwt
+DEPENDPATH += C:/Qt/Qt5.12.12/5.12.12/mingw73_64/lib

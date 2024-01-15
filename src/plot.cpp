@@ -275,7 +275,7 @@ void Plot::setSymbols(ShowSymbols shown)
 
 void Plot::setLegendPosition(Qt::AlignmentFlag alignment)
 {
-    legend.setAlignmentInCanvas(alignment);
+    //legend.setAlignmentInCanvas(alignment);
     replot();
 }
 
